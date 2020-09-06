@@ -92,7 +92,7 @@ void loop() {
           File file = SD.open("cat.jpg");
           if (file) {
             client.println("HTTP/1.1 200 OK");
-            client.println("Content-Type: image/jpg");
+            client.println("Content-Type: image/jpeg");
             client.println("Connection: close");  // the connection will be closed after completion of the response
             client.println("Content-Length: " +  String(file.fileSize()));
             client.println();
